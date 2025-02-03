@@ -1,0 +1,62 @@
+.kurullar-body {
+    background-color: #fffce6;
+}
+
+.common-content-box {
+    border-radius: 5px;
+    width: 1000px;
+    height: auto;
+    padding: 70px 120px;
+    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+   
+}
+.pra {
+    margin-left: 10px;
+    font-size: 25px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.black {
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.davet-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tüm içeriği ortalar */
+    text-align: left;
+    /* Metinleri ortalar */
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.kurul{
+    padding-bottom: 10px;
+}
+
+
+
+/* Mobil için özel düzenleme */
+@media (max-width: 768px) {
+    .about-sectionv02 {
+        padding: 0 10px;
+        /* Kenarlara yapışmasını önler */
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .common-content-box {
+        margin: 0;
+    }
+}
+

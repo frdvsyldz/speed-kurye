@@ -1,0 +1,167 @@
+.başlık {
+    margin-top: 0;
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifn
+}
+
+.kayit-box {
+    width: 100%;
+    max-width: 1000px;
+    /* İçeriğin çok genişlemesini önler */
+    padding: 20px;
+    /* Kenarlardan boşluk verir */
+    text-align: center;
+    margin-left: 180px;
+    border-radius: 5px;
+    width: 1000px;
+    height: auto;
+    padding: 70px 120px;
+    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+   
+}
+
+.kayit-title {
+    margin-bottom: 15px;
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sub-title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.registration-table {
+    width: 100%;
+    background-color: #eef6f8;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.registration-table th {
+    background-color: rgb(248, 185, 108);
+    padding: 13px;
+    border: 2px solid rgb(248, 178, 0);
+    font-size: 19px;
+}
+
+.registration-table td {
+    padding: 10px;
+    border: 1px solid rgb(248, 178, 0);
+
+}
+
+.info-list {
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+
+
+.course-accommodation-container {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.info-table {
+    width: 100%;
+    background-color: #eef6f8;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.info-table th {
+    background-color: rgb(248, 185, 108);
+    padding: 13px;
+    border: 2px solid rgb(248, 178, 0);
+    font-size: 19px;
+
+}
+
+.info-table td {
+    padding: 10px;
+    border: 1px solid rgb(248, 178, 0);
+}
+
+
+.transfer-bank-container {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.section-title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.red-title {
+    color: rgb(0, 0, 0);
+}
+
+.pra {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 2px;
+}
+
+/* ✅ Mobil uyumlu hale getir */
+@media (max-width: 768px) {
+    .kayit {
+        padding: 0;
+        /* Mobilde kenar boşluğu bırakma */
+        font-size: x-small;
+    }
+
+    .kayit-box {
+        width: 100vw;
+        /* Tam ekran genişliği al */
+        min-height: 100vh;
+        /* Ekranı tamamen kaplasın */
+        padding: 20px;
+        /* İçerik ile kenarlar arasında boşluk */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* İçeriği dikey ortala */
+        font-size: x-small;
+        margin-left: 0;
+        padding-left: 0;
+    }
+  
+
+    .pra {
+        font-size: 14px;
+        /* Yazı boyutunu biraz küçült */
+    }
+
+    .red-title{
+        width: 50vw;
+
+    }
+}

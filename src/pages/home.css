@@ -1,0 +1,160 @@
+.homepage {
+  background:#fffce6;
+}
+
+.banner {
+  text-align: center;
+  
+}
+
+.banner-image {
+ width: 100%;
+  height: auto;
+}
+
+
+.countdown-panel {
+  margin-top: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  /* Kutular arası boşluk */
+  padding: 2px;
+  background-color: 		#FF9800 ;/* Arka plan rengi */
+  /*border: 1px solid rgb(88, 59, 4);; /* Kenarlık */
+  
+ 
+  max-width: 100%;
+
+}
+
+.logo img {
+  height: 80px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  padding-top: 3px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF9800;
+  ;
+  /* Kutu arka planı */
+  padding: 2px 20px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px #fef0e5;
+  /* Hafif gölge */
+  margin-bottom: 5px;
+
+
+}
+
+.countdown-number {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ffffff;
+  /* Sayıların rengi */
+
+}
+
+.countdown-label {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ffffff;
+  /* Etiket rengi */
+  margin-top: 2px;
+}
+
+
+.davet{
+  padding-top: 25px;
+  font-size: 35px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top:5px;
+  color: black;
+}
+
+.kutu-box{
+  width: 100%;
+  max-width: 800px;
+  /* İçeriğin çok genişlemesini önler */
+  padding: 20px;
+  /* Kenarlardan boşluk verir */
+  text-align: center;
+  margin-left: 450px;
+
+}
+
+.pra{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  
+}
+
+/* Tablet ve mobil uyumu */
+@media (max-width: 1024px) {
+  .countdown-panel {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .countdown-item {
+    padding: 8px 15px;
+  }
+
+  .countdown-number {
+    font-size: 28px;
+  }
+
+  .countdown-label {
+    font-size: 20px;
+  }
+
+  .kutu-box {
+    display: none;
+  }
+
+  .pra {
+    font-size: 18px;
+  }
+}
+
+/* Küçük ekranlar (Mobil) */
+@media (max-width: 768px) {
+  .countdown-panel {
+    flex-direction:row;
+    gap: 5px;
+  }
+
+  .countdown-item {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .countdown-number {
+    font-size: 24px;
+  }
+
+  .countdown-label {
+    font-size: 18px;
+  }
+
+  .kutu-box {
+   /* padding: 30px 20px;
+    width: 50%;*/
+    display: none;
+  }
+
+  .pra {
+    font-size: 16px;
+  }
+
+
+   
+}

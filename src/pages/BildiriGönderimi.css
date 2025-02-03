@@ -1,0 +1,106 @@
+.bildiri-container {
+  .davet-box {
+    width: 100%;
+    max-width: 800px;
+    /* İçeriğin çok genişlemesini önler */
+    padding: 20px;
+    /* Kenarlardan boşluk verir */
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    /*border-radius: 5px;
+    width: 1000px;
+    height: auto;
+    padding: 70px 120px;
+    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;*/
+   
+  
+  
+  .bildiri-title {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .bildiri-info {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d50505;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .bildiri-text {
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .bildiri-subtitle {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .bildiri-list {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .bildiri-list li {
+    font-size: 19px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .bildiri-email {
+    color: #1b05c1b9;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .bildiri-email:hover {
+    text-decoration:underline;
+  }
+  
+
+  .bildiri-title2{
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  /* ✅ Mobil uyumlu hale getir */
+@media (max-width: 768px) {
+  .bildiri-container {
+      padding: 0;
+      /* Mobilde kenar boşluğu bırakma */
+  }
+
+  .bildiri-container {
+      width: 100vw;
+      /* Tam ekran genişliği al */
+      min-height: 100vh;
+      /* Ekranı tamamen kaplasın */
+      padding: 0px;
+      /* İçerik ile kenarlar arasında boşluk */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* İçeriği dikey ortala */
+  }
+
+  .pra {
+      font-size: 14px;
+      /* Yazı boyutunu biraz küçült */
+  }
+}
+}

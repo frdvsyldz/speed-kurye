@@ -1,0 +1,73 @@
+/*.davet-body {
+    background: #fffce6;
+}*/
+.davet-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tüm içeriği ortalar */
+    text-align: center;
+    /* Metinleri ortalar */
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.davet-box {
+    width: 100%;
+    max-width: 800px;
+    /* İçeriğin çok genişlemesini önler */
+    padding: 20px;
+    /* Kenarlardan boşluk verir */
+    text-align: center;
+    margin-right: 20px;
+}
+
+.about-contentv02 {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    margin: 0 auto;
+    margin-left: 10px;
+    
+}
+
+.section-title h1 {
+    text-align: center;
+    margin-right: 5px;
+}
+
+.section-title p {
+    text-align: center;
+ 
+   
+}
+
+
+
+@media (max-width: 768px) {
+    .davet-body {
+        padding: 0;
+        /* Mobilde kenar boşluğu bırakma */
+    }
+
+    .davet-box {
+        width: 100vw;
+        /* Tam ekran genişliği al */
+        min-height: 100vh;
+        /* Ekranı tamamen kaplasın */
+        padding: 20px;
+        /* İçerik ile kenarlar arasında boşluk */
+        margin-top: 0;
+        padding-top: 0;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* İçeriği dikey ortala */
+    }
+
+    .pra {
+        font-size: 14px;
+        
+    }
+}
