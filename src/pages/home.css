@@ -1,160 +1,277 @@
-.homepage {
-  background:#fffce6;
+/* home.css */
+
+/* Reset */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.banner {
-  text-align: center;
-  
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
 }
 
-.banner-image {
- width: 100%;
-  height: auto;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-
-.countdown-panel {
-  margin-top: -6px;
+/* Hero */
+.hero {
+  padding: 5rem 0;
+  background: linear-gradient(90deg, #67c17a6c, #c6f4d0ab);
+}
+.hero-content {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
-  /* Kutular arası boşluk */
-  padding: 2px;
-  background-color: 		#FF9800 ;/* Arka plan rengi */
-  /*border: 1px solid rgb(88, 59, 4);; /* Kenarlık */
-  
- 
-  max-width: 100%;
-
+  justify-content: space-between;
+  gap: 2rem;
 }
-
-.logo img {
-  height: 80px;
-  margin-top: -5px;
-  margin-bottom: -5px;
-  padding-top: 3px;
+.hero-text {
+  flex: 1 1 500px;
 }
-
-.countdown-item {
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.hero-text p {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #19c460;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  gap: 0.4rem;
+}
+.hero-buttons {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  background-color: #FF9800;
-  ;
-  /* Kutu arka planı */
-  padding: 2px 20px;
-  border-radius: 8px; 
-  box-shadow: 0 4px 6px #fef0e5;
-  /* Hafif gölge */
-  margin-bottom: 5px;
-
-
-}
-
-.countdown-number {
-  font-size: 36px;
-  font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #ffffff;
-  /* Sayıların rengi */
-
-}
-
-.countdown-label {
-  font-size: 25px;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
   font-weight: 600;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: 0.3s ease;
+}
+.btn-primary {
+  background-color: #16a34a;
   color: #ffffff;
-  /* Etiket rengi */
-  margin-top: 2px;
 }
-
-
-.davet{
-  padding-top: 25px;
-  font-size: 35px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-top:5px;
-  color: black;
+.btn-primary:hover {
+  background-color: #15803d;
 }
-
-.kutu-box{
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-illustration {
   width: 100%;
-  max-width: 800px;
-  /* İçeriğin çok genişlemesini önler */
-  padding: 20px;
-  /* Kenarlardan boşluk verir */
+  height: 250px;
+  background-color: #cbd5e1;
+  border-radius: 1rem;
+}
+
+/* Stats */
+.stats {
+  background-color: #f3f4f6;
+  padding: 3rem 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
   text-align: center;
-  margin-left: 450px;
-
+}
+.stat-item {
+  padding: 1rem;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+.stat-label {
+  color: #6b7280;
 }
 
-.pra{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  
+/* Features */
+.features {
+  padding: 4rem 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.section-header p {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  margin-bottom: 1rem;
+  color: #16a34a;
+}
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.feature-card p {
+  color: #4b5563;
 }
 
-/* Tablet ve mobil uyumu */
-@media (max-width: 1024px) {
-  .countdown-panel {
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .countdown-item {
-    padding: 8px 15px;
-  }
-
-  .countdown-number {
-    font-size: 28px;
-  }
-
-  .countdown-label {
-    font-size: 20px;
-  }
-
-  .kutu-box {
-    display: none;
-  }
-
-  .pra {
-    font-size: 18px;
-  }
+/* CTA */
+.cta {
+  background-color: #d8ebdb;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta p {
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-large {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
 }
 
-/* Küçük ekranlar (Mobil) */
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 3rem 0;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-brand {
+  flex: 1;
+}
+.footer-brand .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.footer-section h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-section ul li a,
+.contact-info a {
+  color: #f9fafb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
 @media (max-width: 768px) {
-  .countdown-panel {
-    flex-direction:row;
-    gap: 5px;
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
   }
-
-  .countdown-item {
-    width: 80%;
-    padding: 10px;
+  .hero-text h1 {
+    font-size: 2rem;
   }
-
-  .countdown-number {
-    font-size: 24px;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
   }
-
-  .countdown-label {
-    font-size: 18px;
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
   }
-
-  .kutu-box {
-   /* padding: 30px 20px;
-    width: 50%;*/
-    display: none;
+  .features-grid {
+    grid-template-columns: 1fr;
   }
-
-  .pra {
-    font-size: 16px;
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
-
-
-   
+  .footer-links {
+    justify-content: center;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
 }

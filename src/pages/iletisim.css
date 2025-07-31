@@ -1,0 +1,149 @@
+.contact-wrapper {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+}
+
+.contact-hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contact-text {
+  flex: 1 1 400px;
+}
+
+.contact-text h1 {
+  font-size: 2.2rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  color: #334155;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-info a {
+  color: #16a34a;
+  text-decoration: none;
+}
+
+.contact-form-section {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: #16a34a;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-hero {
+    flex-direction: column;
+  }
+}
+.help-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.help-section h2 {
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-4px);
+}
+
+.faq-card h3 {
+  font-size: 1.1rem;
+  color: #16a34a;
+  margin-bottom: 0.5rem;
+}
+
+.faq-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}

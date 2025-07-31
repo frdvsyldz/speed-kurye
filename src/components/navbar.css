@@ -1,72 +1,123 @@
+/* Genel yapı */
 .navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 24px;
   position: sticky;
   top: 0;
-  background-color: #F57C00;
-  padding: 20px 5px;
-  z-index: 1000;
-  width: 100%;
-  text-align: center;
+  z-index: 100;
 }
 
-.nav-links {
+/* İçerik hizalama */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo boyutu */
+.navbar-logo img {
+  height: 48px;
+  width: auto;
+}
+
+/* Menü */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: larger;
+    display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.nav-links a {
-  color: #ffffff;
+.dropdown-menu li {
+  white-space: nowrap;
+   padding: 6px 12px;
+}
+
+
+.dropdown-menu li a {
+  color: #1e293b;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.nav-links a:hover {
-  text-decoration: dashed;
-  color: #feb969;
+.dropdown-menu li a:hover {
+  color: #16a34a;
 }
 
+/* Linkler */
+.nav-link {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #00a651;
+}
+
+/* Sosyal ikonlar */
+.nav-icon img {
+  height: 24px;
+  width: 24px;
+  transition: transform 0.3s;
+}
+
+.nav-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Mobil menü butonu (varsayılan gizli) */
 .menu-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
   display: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
 }
 
-/* Mobilde hamburger menü */
+/* Mobil uyum */
 @media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
   .menu-toggle {
-      display: block;
-      position: absolute;
-      top: 15px;
-      left: 20px;
-  }
-
-  .nav-links-container {
-      display: none;
-      flex-direction: column;
-      background-color: #F57C00;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      padding: 10px 0;
-  }
-
-  .nav-links-container.open {
-      display: flex;
-  }
-
-  .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+    display: block;
   }
 }
-
-

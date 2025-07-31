@@ -1,104 +1,168 @@
-import { useEffect, useState } from "react";
-import bannerImage from "../assets/banner.jpg"
-import tarıhIcon from "../assets/tarih-icon.png"
-import "./home.css"
-import Navigation from "../components/Navigation";
-import Footer from "../components/footer"
+import React, { useEffect, useState } from 'react';
+import { Truck, ShieldCheck, MapPin, Phone, Mail, ArrowRight, CheckCircle } from 'lucide-react';
+import './home.css';
+import OrderForm from '../components/orderform'
+import Footer from '../components/footer';
+import { Helmet } from 'react-helmet';
 
-const Homepage = () => {
+<Helmet>
+  <title>Speed Kurye | İstanbul İçi ve Şehirlerarası Kurye Hizmeti</title>
+  <meta name="description" content="İstanbul, Kocaeli ve çevresine hızlı, güvenli kurye hizmetleri. Motorlu kurye, araçlı kurye, gece ve VIP teslimatlar." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="kurye, motorlu kurye, araçlı kurye, istanbul kurye, şehirlerarası kurye, vip kurye" />
+</Helmet>
 
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-    });
-
-    useEffect(() => {
-        const targetDate = new Date("2025-05-04T00:00:00").getTime(); // 19 Eylül 2025
-        const interval = setInterval(() => {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                setTimeLeft({
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minutes: Math.floor((difference / (1000 * 60)) % 60),
-                    seconds: Math.floor((difference / 1000) % 60),
-                });
-            } else {
-                clearInterval(interval);
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-            }
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
 
 
-        <div className="homepage">
+const Homepage: React.FC = () => {
+  const [, setIsVisible] = useState(false);
 
-            {/* Banner alanı */}
-            <section className="banner">
-                <img src={bannerImage} alt="Banner" className="banner-image" />
-            </section>
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-            <div className="countdown-panel">
-                <div className="logo ">
-                    <img src={tarıhIcon} />
+  const features: FeatureCardProps[] = [
+    {
+      icon: <Truck size={40} />,
+      title: "Hızlı Teslimat",
+      description: "Aynı gün teslimat ile zamanında kurye çözümleri. 2 saat içinde ekspres teslimat seçeneği.",
+    },
+    {
+      icon: <ShieldCheck size={40} />,
+      title: "Güvenli Taşıma",
+      description: "Sigortalı gönderim ve profesyonel taşıma garantisi. %100 güvenli teslimat.",
+    },
+    {
+      icon: <MapPin size={40} />,
+      title: "Şehirler Arası",
+      description: "81 ilde aktif, geniş teslimat ağıyla hizmetinizdeyiz. Türkiye'nin her yerine ulaşım.",
+    }
+  ];
+
+ 
+
+  const stats = [
+    { number: "50K+", label: "Mutlu Müşteri" },
+    { number: "1M+", label: "Başarılı Teslimat" },
+    { number: "81", label: "Şehir Kapsamı" },
+    { number: "24/7", label: "Müşteri Desteği" }
+  ];
+
+  return (
+    <>
+  
+      <title>SpeedKurye - Hızlı ve Güvenli Teslimat | Türkiye Geneli Kurye Hizmeti</title>
+      <meta name="description" content="SpeedKurye - Türkiye genelinde hızlı, güvenli ve profesyonel kurye hizmeti. Aynı gün teslimat, sigortalı gönderim, 81 ilde aktif hizmet." />
+      <meta name="keywords" content="kurye, hızlı teslimat, güvenli taşıma, ekspres kurye, türkiye kurye, aynı gün teslimat" />
+      
+      <main className="homepage">
+        
+      
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="container">
+            <div className="hero-content">
+              <div className="hero-text">
+                <div className="hero-badge">
+                  <CheckCircle size={16} />
+                  Türkiye'nin En Hızlı Kurye Hizmeti
                 </div>
-                <div className="countdown-item">
-                    <span className="countdown-number">{timeLeft.days}</span>
-                    <span className="countdown-label">Gün</span>
+                <h1>Hızlı ve Güvenli Teslimat</h1>
+                <p>
+                  Türkiye genelinde ekspres kurye hizmeti ile zamanında ve güvenilir teslimat sunuyoruz. 
+                  Profesyonel ekibimiz ve modern teknolojimizle her türlü kurye ihtiyacınıza çözüm üretiyoruz.
+                </p>
+                <div className="hero-buttons">
+                  <a href="#hizmetler" className="btn btn-primary">
+                    Hizmetlerimizi İncele
+                    <ArrowRight size={20} />
+                  </a>
+                  <a href="tel:+905378851441" className="btn btn-secondary">
+                    <Phone size={20} />
+                    Hemen Ara
+                  </a>
+                   <a href="https://wa.me/905378851441" className="btn btn-primary">
+                    <Phone size={20} />
+                    WhatsApp
+                  </a>
                 </div>
-                <div className="countdown-item">
-                    <span className="countdown-number">{timeLeft.hours}</span>
-                    <span className="countdown-label">Saat</span>
-                </div>
-                <div className="countdown-item">
-                    <span className="countdown-number">{timeLeft.minutes}</span>
-                    <span className="countdown-label">Dakika</span>
-                </div>
-                <div className="countdown-item">
-                    <span className="countdown-number">{timeLeft.seconds}</span>
-                    <span className="countdown-label">Saniye</span>
-                </div>
+              </div>
+              <div className="hero-image">
+                <OrderForm />
+              </div>
             </div>
+          </div>
+        </section>
 
-            <Navigation />
-
-            <section className="about-sectionv02 pt-20 space-bottom position-relative overflow-hidden">
-                <div className="container">
-                    <div className="row g-4">
-                        <div className="col-lg-12 col-md-12">
-                            <div className="kutu-box">
-                                <div className="about-contentv02">
-                                    <div className="section-title">
-                                        <h1 className="davet">
-                                            DAVET
-                                        </h1>
-                                        <p className="pra mb-30">Değerli Meslektaşlarımız,</p>
-                                        <p className="pra mb-30">Türkiye Romatizma Araştırma ve Savaş Derneği (TRASD) Diyarbakır Şubesi’nin düzenlediği “ 2. Dicle Romatoloji Günleri " sempozyumu, 4-6 Nisan 2025 tarihlerinde Diyarbakır’da düzenlenecektir.</p>
-                                        <p className="pra mb-30">Sempozyumun ana konusu  “spondiloartritler” olacaktır. En fazla görülen romatizmal hastalar arasında yer alan spondiloartritlerin tanı ve tedavisinde son yıllarda önemli gelişmeler olmuştur. Bununla birlikte hala cevap ve çözüm  bekleyen sorular ve sorunlar mevcuttur.  Kas iskelet dışı tutulumları da olan spondiloartritler, farklı klinik disiplinleri de ilgilendirmektedir.  İki gün boyunca deneyimli akademisyenlerle bu konuları ayrıntılı olarak konuşabilmeyi amaçladık</p>
-                                        <p className="pra mb-30">Kapsamlı bilimsel programı ile beğeninizi kazanacağını düşündüğümüz toplantımıza, değerli meslektaşlarımızın katılımı ve bilimsel katkıları  sempozyumumuzu  zenginleştirecektir.</p>
-                                        <p className="pra mb-30"> “2. Dicle Romatoloji Günleri” ne katılımınızı bekliyoruz.</p>
-                                        <p className="pra mb-30">Saygılarımızla,</p>
-                                        <p className="pra mb-30">Doç. Dr. Mehmet ÇAĞLAYAN<br /><b>Sempozyum Başkanı</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        {/* Stats Section */}
+        <section className="stats">
+          <div className="container">
+            <div className="stats-grid">
+              {stats.map((stat, index) => (
+                <div key={index} className="stat-item">
+                  <div className="stat-number">{stat.number}</div>
+                  <div className="stat-label">{stat.label}</div>
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <Footer />
-        </div>
+        {/* Features Section */}
+        <section id="hizmetler" className="features">
+          <div className="container">
+            <div className="section-header">
+              <h2>Neden SpeedKurye?</h2>
+              <p>Müşteri memnuniyeti odaklı hizmet anlayışımızla sektörde öncü konumdayız</p>
+            </div>
+            <div className="features-grid">
+              {features.map((feature, index) => (
+                <div key={index} className="feature-card">
+                  <div className="feature-icon">
+                    {feature.icon}
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    );
+       
+
+        {/* CTA Section */}
+        <section className="cta">
+          <div className="container">
+            <div className="cta-content">
+              <h2>Hemen Teslimat Talebinizi Oluşturun</h2>
+              <p>
+                Profesyonel kurye ekibimiz sizin için hazır. 
+                Hızlı ve güvenli teslimat için şimdi iletişime geçin.
+              </p>
+              <div className="cta-buttons">
+                <a href="tel:+905001234567" className="btn btn-primary btn-large">
+                  <Phone size={24} />
+                  Hemen Ara
+                </a>
+                <a href="mailto:info@speedkurye.com" className="btn btn-secondary btn-large">
+                  <Mail size={24} />
+                  E-posta Gönder
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+<Footer/>
+      
+      </main>
+    </>
+  );
 };
 
-export default Homepage; 
+export default Homepage;

@@ -1,17 +1,20 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navigate, Route, HashRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
-import AnaKonular from "./pages/AnaKonular";
-import BildiriGönderimi from "./pages/BildiriGönderimi";
-import GenelBilgiler from "./pages/GenelBilgiler";
-import KayitKonaklama from "./pages/KayitKonaklama";
-import BilimselProgram from "./pages/BilimselProgram";
-import "./pages/Kurullar"
-import İletisim from "./pages/İletisim";
-import Davet from "./pages/Davet";
-import Kurullar from "./pages/Kurullar";
-import "./App.css"
+import Services from "./pages/services";
+import CourierDetailForm from "./pages/courierdetailform";
+import MotorluKurye from "./pages/motorluKurye";
+import AracliKurye from "./pages/araclikurye";
+import VipKurye from "./pages/vipKurye";
+import UcakKurye from "./pages/uçakKurye";
+import SehirlerarasiKurye from "./pages/sehirlerarasiKurye";
+import GeceKurye from "./pages/geceKurye";
+import Hakkimizda from "./pages/aboutus";
+import Iletisim from "./pages/iletisim";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+
 
 
 const App: React.FC = () => {
@@ -20,23 +23,31 @@ const App: React.FC = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/genel-bilgiler" element={<GenelBilgiler />} />
-                <Route path="/kayit-konaklama" element={<KayitKonaklama />} />
-                <Route path="/bilimsel-program" element={<BilimselProgram />} />
-                <Route path="/bildiri-gonderimi" element={<BildiriGönderimi />} />
-                <Route path="/ana-konular" element={<AnaKonular />} />
-                <Route path="/iletisim" element={<İletisim />} />
-                <Route path="/davet" element={<Davet/>} />
-                <Route path="/kurullar" element={<Kurullar/>} />
+                <Route path="/hizmetler" element={<Services />} />
+                <Route path="/kurye-talep-formu" element={<CourierDetailForm />} />
+                <Route path="/motorlu-kurye" element={<MotorluKurye />} />
+                <Route path="/aracli-kurye" element={<AracliKurye />} />
+                <Route path="/vip-kurye" element={<VipKurye />} />
+                <Route path="/ucak-kurye" element={<UcakKurye />} />
+                <Route path="/sehirlerarasi-kurye" element={<SehirlerarasiKurye />} />
+                <Route path="/gece-kurye" element={<GeceKurye />} />
+                <Route path="/hakkimizda" element={<Hakkimizda />} />
+                <Route path="/iletisim" element={<Iletisim />} />
+
+                <Route path="/admin" element={<AdminLogin />} />
+
+                <Route
+                    path="/admin/dashboard"
+                    element={
+                        localStorage.getItem("isAdminAuthenticated") === "true" ? (
+                            <AdminDashboard />
+                        ) : (
+                            <Navigate to="/admin-login" replace />
+                        )
+                    }
+                />
             </Routes>
         </Router>
-
-
-
-
-
-
-
     );
 };
 
